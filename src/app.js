@@ -57,7 +57,7 @@ const App = React.createClass({
       e.preventDefault()
       var array = []
       this.state.members.map(m => array.push(m))
-      array.push(person)
+      array.includes(person) ? console.log("INCLUDES") : array.push(person)
       this.setState({members: array})
     }
   },
@@ -72,7 +72,6 @@ const App = React.createClass({
         }
       }
       this.setState({members: array})
-
     }
   },
   render () {
